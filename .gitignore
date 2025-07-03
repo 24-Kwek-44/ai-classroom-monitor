@@ -1,0 +1,15 @@
+# Python
+ai-service/venv/
+
+# IDE / OS files
+.idea/
+.vscode/
+__pycache__/
+*.pyc
+
+# Laravel
+dashboard/node_modules/
+dashboard/public/build/
+dashboard/storage/
+dashboard/vendor/
+dashboard/.env
