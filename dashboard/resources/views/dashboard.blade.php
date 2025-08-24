@@ -76,7 +76,7 @@
                                     type: 'bar', // This dataset is the bar chart
                                     label: 'Week 13',
                                     data: barData,
-                                    backgroundColor: '#1DE9B6', // Teal bar color
+                                    backgroundColor: '#1DE9B6', // Teal bar color                       
                                     borderRadius: 8,
                                     yAxisID: 'y',
                                 }
@@ -122,7 +122,7 @@
             <div class="bg-white p-6 rounded-2xl shadow-md">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-xl font-bold">Session Attention Timeline</h3>
-                    <a href="#" class="text-sm font-medium text-[#1DE9B6] hover:underline">See all</a>
+                    <a href="{{ route('insights') }}" class="text-sm font-medium text-[#1DE9B6] hover:underline">See all</a>
                 </div>
                 
                 {{-- Wrapper div to control size and prevent resizing animation --}}
@@ -202,7 +202,7 @@
             <div class="bg-white p-6 rounded-2xl shadow-md">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-xl font-bold">Engagement Score</h3>
-                    <a href="#" class="text-sm font-medium text-[#1DE9B6] hover:underline">See all</a>
+                    <a href="{{ route('trends') }}" class="text-sm font-medium text-[#1DE9B6] hover:underline">See all</a>
                 </div>
                 
                 <div class="flex items-center justify-center space-x-8">
@@ -300,7 +300,7 @@
             <div class="bg-white p-6 rounded-2xl shadow-md">
                 <div class="flex justify-between items-center mb-4">
                     <h3 class="text-xl font-bold">Weekly Insights & Suggestions</h3>
-                    <a href="#" class="text-sm font-medium text-[#1DE9B6] hover:underline" >See all</a>
+                    <a href="{{ route('trends') }}" class="text-sm font-medium text-[#1DE9B6] hover:underline" >See all</a>
                 </div>
                 
                 {{-- List of insights --}}
