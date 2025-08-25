@@ -1,12 +1,16 @@
 <?php
 
+// CRITICAL DIFFERENCE #1: Make sure these 'use' statements are at the top
 use App\Http\Controllers\ProfileController;
+use Illuminate\Http\Request; 
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
+// ... (All your other routes like /dashboard, /concentration, etc. stay here) ...
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -34,3 +38,15 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::post('/api/update-status', function (Request $request) {
+    $identifier = $request->input('student_identifier');
+    $status = $request->input('status');
+    $confidence = $request->input('confidence');
+
+    Log::info("SUCCESS! Data Received: ID -> {$identifier}, Status -> {$status}, Confidence -> {$confidence}");
+
+    return response()->json([
+        'message' => 'Data received successfully.'
+    ]);
+}); // <

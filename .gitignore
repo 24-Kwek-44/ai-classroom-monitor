@@ -1,15 +1,24 @@
-# Python
-ai-service/venv/
+# Laravel Folders
+/dashboard/node_modules
+/dashboard/public/build
+/dashboard/storage
+/dashboard/vendor
+/dashboard/.env
 
-# IDE / OS files
-.idea/
+# Python Folders
+/ai-service/venv
+/ai-service/training_results
+/ai-service/__pycache__
+/ai-service/runs
+
+# Python Datasets & Large Files
+/ai-service/My-First-Project-1
+/ai-service/dataset.zip
+/ai-service/*.mp4
+/ai-service/*.pt
+
+# IDE and OS files
 .vscode/
-__pycache__/
+.idea/
+.DS_Store
 *.pyc
-
-# Laravel
-dashboard/node_modules/
-dashboard/public/build/
-dashboard/storage/
-dashboard/vendor/
-dashboard/.env

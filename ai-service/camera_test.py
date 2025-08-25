@@ -1,32 +1,24 @@
 import cv2
 
-# Initialize the video capture object. 0 is usually the default webcam.
+print("Attempting to open webcam...")
 cap = cv2.VideoCapture(0)
 
 if not cap.isOpened():
-    print("Error: Could not open video stream from webcam.")
+    print("FATAL ERROR: Could not open video stream from webcam.")
     exit()
+else:
+    print("Webcam successfully opened. Press 'q' in the video window to exit.")
 
-print("Camera test successful! Press 'q' to quit.")
-
-# Loop to continuously get frames from the webcam
 while True:
-    # Capture frame-by-frame
-    ret, frame = cap.read()
-
-    # If frame is read correctly, ret is True
-    if not ret:
-        print("Error: Can't receive frame (stream end?). Exiting ...")
+    success, frame = cap.read()
+    if not success:
         break
 
-    # Display the resulting frame in a window
-    cv2.imshow('Camera Test - Press Q to Quit', frame)
+    cv2.imshow("Webcam Test", frame)
 
-    # Wait for the 'q' key to be pressed to exit the loop
-    if cv2.waitKey(1) == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 
-# When everything is done, release the capture object and close windows
 cap.release()
 cv2.destroyAllWindows()
 print("Resources released.")
