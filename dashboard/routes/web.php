@@ -31,6 +31,24 @@ Route::get('/trends', function () {
     return view('engagement-trends');
 })->middleware(['auth', 'verified'])->name('trends');
 
+Route::get('/api/get-status', function () {
+    // Define the path to our live status file
+    $statusFilePath = storage_path('app/status.json');
+
+    // Check if the file exists before we try to read it
+    if (!file_exists($statusFilePath)) {
+        // If the file doesn't exist yet, return an empty array
+        return response()->json([]);
+    }
+
+    // Read the content of the file
+    $statusData = file_get_contents($statusFilePath);
+
+    // Send the content back as a JSON response
+    // The 'Content-Type: application/json' header will be set automatically
+    return $statusData;
+});
+
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
