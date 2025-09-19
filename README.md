@@ -60,7 +60,7 @@ This project, **`InsightEdu`**, addresses the issue by providing teachers with a
 *(YOLOv8x model detecting and classifying students in real-time)*
 ![AI Engine in Action](images/ai_engine.png)
 
-> 🎥 *(Optional)* Add a short demo video or GIF here for quick system preview.
+[🎥 Watch Demo Video](videos/demo.mp4)
 
 ---
 
