@@ -201,13 +201,7 @@ Now open the web app → register → navigate to **Session Insights** for live 
 
 ---
 
-## 10. License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-## 11. Acknowledgements
+## 10. Acknowledgements
 
 * Supervisors & moderators for guidance
 * Open-source tools: Ultralytics YOLO, Flask, Laravel, Chart.js
