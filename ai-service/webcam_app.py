@@ -12,7 +12,7 @@ import datetime  # For ISO-format timestamps in API payloads
 # Purpose: Centralize all key parameters (webcam, model, API).
 # ==========================================================
 WEBCAM_INDEX = 1   # Webcam device index (0 = default cam, 1 = external cam)
-MODEL_PATH = r"D:\UTAR\SEM 3\PROJECT II\ai-classroom-monitor\ai-service\training_results\final_balanced_run\weights\best.pt"
+MODEL_PATH = r"D:\UTAR\SEM 3\PROJECT II\ai-classroom-monitor\ai-service\training_results\attention_model_final_yolo11x\weights"
 
 # API Configuration
 API_ENDPOINT = "http://127.0.0.1:8000/api_receiver.php"
